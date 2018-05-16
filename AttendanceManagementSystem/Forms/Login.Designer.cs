@@ -38,13 +38,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.link_login = new System.Windows.Forms.LinkLabel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.chk_show = new System.Windows.Forms.CheckBox();
             this.lbl_login = new System.Windows.Forms.Label();
             this.link_forgetpassword = new System.Windows.Forms.LinkLabel();
-            this.lbl_confirmpassword = new System.Windows.Forms.Label();
             this.txt_newpassword = new System.Windows.Forms.TextBox();
-            this.link_login = new System.Windows.Forms.LinkLabel();
-            this.chk_show = new System.Windows.Forms.CheckBox();
+            this.lbl_confirmpassword = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -165,6 +165,21 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Technological\r\n    University\r\n    (Kyaukse)\r\n";
             // 
+            // link_login
+            // 
+            this.link_login.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.link_login.AutoSize = true;
+            this.link_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.link_login.ForeColor = System.Drawing.Color.White;
+            this.link_login.LinkColor = System.Drawing.Color.White;
+            this.link_login.Location = new System.Drawing.Point(70, 398);
+            this.link_login.Name = "link_login";
+            this.link_login.Size = new System.Drawing.Size(43, 17);
+            this.link_login.TabIndex = 4;
+            this.link_login.TabStop = true;
+            this.link_login.Text = "Login";
+            this.link_login.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_login_LinkClicked);
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
@@ -184,6 +199,17 @@
             this.panel3.Size = new System.Drawing.Size(379, 475);
             this.panel3.TabIndex = 7;
             // 
+            // chk_show
+            // 
+            this.chk_show.AutoSize = true;
+            this.chk_show.Location = new System.Drawing.Point(307, 219);
+            this.chk_show.Name = "chk_show";
+            this.chk_show.Size = new System.Drawing.Size(51, 17);
+            this.chk_show.TabIndex = 5;
+            this.chk_show.Text = "show";
+            this.chk_show.UseVisualStyleBackColor = true;
+            this.chk_show.Click += new System.EventHandler(this.chk_show_Click);
+            // 
             // lbl_login
             // 
             this.lbl_login.AutoSize = true;
@@ -199,8 +225,8 @@
             this.link_forgetpassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.link_forgetpassword.AutoSize = true;
             this.link_forgetpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.link_forgetpassword.ForeColor = System.Drawing.Color.Silver;
-            this.link_forgetpassword.LinkColor = System.Drawing.Color.DarkGray;
+            this.link_forgetpassword.ForeColor = System.Drawing.Color.DarkRed;
+            this.link_forgetpassword.LinkColor = System.Drawing.Color.Maroon;
             this.link_forgetpassword.Location = new System.Drawing.Point(100, 380);
             this.link_forgetpassword.Name = "link_forgetpassword";
             this.link_forgetpassword.Size = new System.Drawing.Size(171, 20);
@@ -209,17 +235,6 @@
             this.link_forgetpassword.Text = "Forgot your password?";
             this.link_forgetpassword.Visible = false;
             this.link_forgetpassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_reg_LinkClicked);
-            // 
-            // lbl_confirmpassword
-            // 
-            this.lbl_confirmpassword.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_confirmpassword.AutoSize = true;
-            this.lbl_confirmpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_confirmpassword.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_confirmpassword.Location = new System.Drawing.Point(70, 262);
-            this.lbl_confirmpassword.Name = "lbl_confirmpassword";
-            this.lbl_confirmpassword.Size = new System.Drawing.Size(0, 17);
-            this.lbl_confirmpassword.TabIndex = 0;
             // 
             // txt_newpassword
             // 
@@ -232,31 +247,16 @@
             this.txt_newpassword.TabIndex = 2;
             this.txt_newpassword.UseSystemPasswordChar = true;
             // 
-            // link_login
+            // lbl_confirmpassword
             // 
-            this.link_login.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.link_login.AutoSize = true;
-            this.link_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.link_login.ForeColor = System.Drawing.Color.White;
-            this.link_login.LinkColor = System.Drawing.Color.White;
-            this.link_login.Location = new System.Drawing.Point(70, 398);
-            this.link_login.Name = "link_login";
-            this.link_login.Size = new System.Drawing.Size(43, 17);
-            this.link_login.TabIndex = 4;
-            this.link_login.TabStop = true;
-            this.link_login.Text = "Login";
-            this.link_login.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_login_LinkClicked);
-            // 
-            // chk_show
-            // 
-            this.chk_show.AutoSize = true;
-            this.chk_show.Location = new System.Drawing.Point(307, 219);
-            this.chk_show.Name = "chk_show";
-            this.chk_show.Size = new System.Drawing.Size(51, 17);
-            this.chk_show.TabIndex = 5;
-            this.chk_show.Text = "show";
-            this.chk_show.UseVisualStyleBackColor = true;
-            this.chk_show.Click += new System.EventHandler(this.chk_show_Click);
+            this.lbl_confirmpassword.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_confirmpassword.AutoSize = true;
+            this.lbl_confirmpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_confirmpassword.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lbl_confirmpassword.Location = new System.Drawing.Point(70, 262);
+            this.lbl_confirmpassword.Name = "lbl_confirmpassword";
+            this.lbl_confirmpassword.Size = new System.Drawing.Size(0, 17);
+            this.lbl_confirmpassword.TabIndex = 0;
             // 
             // LoginForm
             // 
