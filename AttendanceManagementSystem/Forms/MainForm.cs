@@ -34,26 +34,22 @@ namespace AttendanceManagementSystem
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
-            //List<string> iList = new List<string>();
-            //iList.Add("1BE");
-            //iList.Add("2BE");
-            //iList.Add("3BE");
-            //iList.Add("4BE");
-            //iList.Add("5BE");
-            //iList.Add("6BE");
-            cmb_stulist.DataSource = LoginForm.ylist;
-            // TODO: This line of code loads data into the 'studentAttendanceSystemDBDataSet.Student' table. You can move, or remove it, as needed.
+          
+            cmb_stulist.DataSource = LoginForm.ylist;            
             this.studentTableAdapter.Fill(this.studentAttendanceSystemDBDataSet.Student);
 
             dataGridView1.Visible = false;
             panel3.Visible = false;
             panel2.Visible = false;
-            //GetData("select RNO, Name,  ClassRoom, StuYear from Student");
+            StuReg_panel.Visible = false;
+            radio_absent.Enabled = false;
+            radio_present.Enabled = false;
+            btn_attsave.Enabled = false;
+            
 
             //add column in dataGridView
             DataGridViewComboBoxColumn cmb = new DataGridViewComboBoxColumn();
-            //DataGridViewButtonColumn button = new DataGridViewButtonColumn();
-            //   button.Text = "View Details";
+           
             cmb.HeaderText = "Attendance";
             cmb.Name = "attendance";
             cmb.MaxDropDownItems = 4;
@@ -64,6 +60,11 @@ namespace AttendanceManagementSystem
         }
         private void btn_search_Click(object sender, EventArgs e)
         {
+            StuReg_panel.Visible = false;
+            radio_absent.Enabled = true;
+            radio_present.Enabled = true;
+            btn_attsave.Enabled = true;
+           
             try
             {
                 conn.Open();
@@ -77,8 +78,7 @@ namespace AttendanceManagementSystem
                     panel2.Visible = true;
                     DataTable dt = new DataTable();
                     dt.Load(dr);
-                    dataGridView1.DataSource = dt;                 
-                    // dataGridView1.Columns.Add(button);
+                    dataGridView1.DataSource = dt;
                     dataGridView1.Columns[3].HeaderCell.Style.BackColor = Color.LimeGreen;
                     dataGridView1.EnableHeadersVisualStyles = false;
                     this.dataGridView1.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvUserDetails_RowPostPaint);
@@ -207,6 +207,18 @@ namespace AttendanceManagementSystem
             LoginForm lfm = new LoginForm();
             lfm.Show();
             this.Close();
+        }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView1.Visible = false;
+            StuReg_panel.Visible = true;
+        }
+
+        private void btn_edit_Click(object sender, EventArgs e)
+        {
+            StuReg_panel.Visible = true;
+            panel3.Visible = false;
+
         }
     }
 
