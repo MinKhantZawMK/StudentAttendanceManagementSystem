@@ -34,22 +34,21 @@ namespace AttendanceManagementSystem
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
-          
-            cmb_stulist.DataSource = LoginForm.ylist;            
-            this.studentTableAdapter.Fill(this.studentAttendanceSystemDBDataSet.Student);
 
-            dataGridView1.Visible = false;
+            cmb_stulist.DataSource = LoginForm.ylist;
+           // this.studentTableAdapter.Fill(this.studentAttendanceSystemDBDataSet.Student);
+
+            dataGridView1.Visible = true;
             panel3.Visible = false;
-            panel2.Visible = false;
-            StuReg_panel.Visible = false;
+            panel2.Visible = true;           
             radio_absent.Enabled = false;
             radio_present.Enabled = false;
             btn_attsave.Enabled = false;
-            
+
 
             //add column in dataGridView
             DataGridViewComboBoxColumn cmb = new DataGridViewComboBoxColumn();
-           
+
             cmb.HeaderText = "Attendance";
             cmb.Name = "attendance";
             cmb.MaxDropDownItems = 4;
@@ -60,11 +59,11 @@ namespace AttendanceManagementSystem
         }
         private void btn_search_Click(object sender, EventArgs e)
         {
-            StuReg_panel.Visible = false;
+          
             radio_absent.Enabled = true;
             radio_present.Enabled = true;
             btn_attsave.Enabled = true;
-           
+
             try
             {
                 conn.Open();
@@ -190,7 +189,7 @@ namespace AttendanceManagementSystem
         {
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
-                dataGridView1.Rows[i].Cells[3].Value = "Present";
+                dataGridView1.Rows[i].Cells[4].Value = "Present";
 
             }
         }
@@ -198,7 +197,7 @@ namespace AttendanceManagementSystem
         {
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
-                dataGridView1.Rows[i].Cells[3].Value = "Absent";
+                dataGridView1.Rows[i].Cells[4].Value = "Absent";
 
             }
         }
@@ -211,15 +210,26 @@ namespace AttendanceManagementSystem
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             dataGridView1.Visible = false;
-            StuReg_panel.Visible = true;
+          
         }
-
         private void btn_edit_Click(object sender, EventArgs e)
         {
-            StuReg_panel.Visible = true;
-            panel3.Visible = false;
 
         }
-    }
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            //StuReg_panel.Visible = true;
+            //panel3.Visible = false;
+            //string stuid = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["ID"].Value.ToString();
+            //string rno = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Roll No."].Value.ToString();
+            //string name = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Name"].Value.ToString();
+            //string classroom = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["ClassRoom"].Value.ToString();
+            //string year = cmb_stulist.Text;
+            //string attendance =
+            //string course = cmb_sub.Text;           
 
+        }
+
+       
+    }
 }

@@ -83,6 +83,7 @@
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(219, 26);
             this.txt_username.TabIndex = 1;
+            this.txt_username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt_password
             // 
@@ -93,7 +94,9 @@
             this.txt_password.Name = "txt_password";
             this.txt_password.Size = new System.Drawing.Size(219, 26);
             this.txt_password.TabIndex = 2;
+            this.txt_password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_password.UseSystemPasswordChar = true;
+            this.txt_password.UseWaitCursor = true;
             // 
             // btn_login
             // 
