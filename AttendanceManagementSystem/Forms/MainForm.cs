@@ -36,6 +36,7 @@ namespace AttendanceManagementSystem
         {
 
             cmb_stulist.DataSource = LoginForm.ylist;
+            cmb_Room.DataSource = GetRoom();
            // this.studentTableAdapter.Fill(this.studentAttendanceSystemDBDataSet.Student);
 
             dataGridView1.Visible = true;
@@ -67,9 +68,10 @@ namespace AttendanceManagementSystem
             try
             {
                 conn.Open();
-                str = "select * from Student where StuYear = @comvalue";
+                str = "select * from Student where StuYear = @comvalue and ClassRoom = @room";
                 cmd = new SqlCommand(str, conn);
                 cmd.Parameters.AddWithValue("@comvalue", cmb_stulist.Text);
+                cmd.Parameters.AddWithValue("@room", cmb_Room.Text);
                 dr = cmd.ExecuteReader();
                 if (dr.HasRows)
                 {
@@ -139,50 +141,68 @@ namespace AttendanceManagementSystem
         }
         private void btn_attsave_Click(object sender, EventArgs e)
         {
-            List<string> attendancelist = new List<string>();
-            int present = 0;
-            int absent = 0;
-            try
+
+            CustomDialogBox.CustomDialogBox cusdialogbox = new CustomDialogBox.CustomDialogBox();
+            cusdialogbox.ShowDialog();
+            if(cusdialogbox.DialogResult == DialogResult.Yes)
             {
-                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                List<string> attendancelist = new List<string>();
+                int present = 0;
+                int absent = 0;
+                try
                 {
-                    string strdgv = "Insert into Attendance (RollNo, StudentName, Year, Datetime, Attendance, Course, ClassRoom)" + "Values (@rno, @stname, @year, @date, @attendance, @course, @class)";
-                    SqlCommand cmdmajor = new SqlCommand(strdgv, conn);
-                    cmdmajor.Parameters.AddWithValue("@rno", dataGridView1.Rows[i].Cells[0].Value);
-                    cmdmajor.Parameters.AddWithValue("@stname", dataGridView1.Rows[i].Cells[1].Value);
-                    cmdmajor.Parameters.AddWithValue("@year", cmb_stulist.Text);
-                    cmdmajor.Parameters.AddWithValue("@date", DateTime.Parse(dateTimePicker1.Value.ToString("d")));
-                    cmdmajor.Parameters.AddWithValue("@attendance", dataGridView1.Rows[i].Cells[3].Value);
-                    cmdmajor.Parameters.AddWithValue("@course", cmb_sub.Text);
-                    cmdmajor.Parameters.AddWithValue("@class", dataGridView1.Rows[i].Cells[2].Value);
-                    conn.Open();
-                    cmdmajor.ExecuteNonQuery();
-                    conn.Close();
-                    attendancelist.Add(dataGridView1.Rows[i].Cells[3].Value.ToString());
-                }
-                MessageBox.Show("Added successfully!");
-                for (int i = 0; i < attendancelist.Count; i++)
-                {
-                    if (attendancelist[i] == "Present")
+                    for (int i = 0; i < dataGridView1.Rows.Count; i++)
                     {
-                        present += 1;
+                        string strdgv = "Insert into Attendance (RollNo, StudentName, Year, Datetime, Attendance, Course, ClassRoom)" + "Values (@rno, @stname, @year, @date, @attendance, @course, @class)";
+                        SqlCommand cmdmajor = new SqlCommand(strdgv, conn);
+                        cmdmajor.Parameters.AddWithValue("@rno", dataGridView1.Rows[i].Cells[1].Value);
+                        cmdmajor.Parameters.AddWithValue("@stname", dataGridView1.Rows[i].Cells[2].Value);
+                        cmdmajor.Parameters.AddWithValue("@year", cmb_stulist.Text);
+                        cmdmajor.Parameters.AddWithValue("@date", DateTime.Parse(dateTimePicker1.Value.ToString("d")));
+                        cmdmajor.Parameters.AddWithValue("@attendance", dataGridView1.Rows[i].Cells[4].Value);
+                        cmdmajor.Parameters.AddWithValue("@course", cmb_sub.Text);
+                        cmdmajor.Parameters.AddWithValue("@class", dataGridView1.Rows[i].Cells[3].Value);
+                        conn.Open();
+                        cmdmajor.ExecuteNonQuery();
+                        conn.Close();
+                        attendancelist.Add(dataGridView1.Rows[i].Cells[4].Value.ToString());
                     }
-                    else
+                  
+                    for (int i = 0; i < attendancelist.Count; i++)
                     {
-                        absent += 1;
+                        if (attendancelist[i] == "Present")
+                        {
+                            present += 1;
+                        }
+                        else
+                        {
+                            absent += 1;
+                        }
+
                     }
 
+                    lbl_present.Text = present.ToString();
+                    lbl_absent.Text = absent.ToString();
+                    lbl_total.Text = attendancelist.Count().ToString();
+                    panel3.Visible = true;
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
 
-                lbl_present.Text = present.ToString();
-                lbl_absent.Text = absent.ToString();
-                lbl_total.Text = attendancelist.Count().ToString();
-                panel3.Visible = true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+
+            //DialogResult dialogResult = MessageBox.Show("Are you sure to save", "Save To Database", MessageBoxButtons.YesNo, MessageBoxIcon.Question, ColorDial);
+            //if (dialogResult == DialogResult.Yes)
+            //{
+               
+            //}
+            //else if (dialogResult == DialogResult.No)
+            //{
+                
+            //}
+           
 
         }
         private void radio_present_Click(object sender, EventArgs e)
@@ -229,7 +249,38 @@ namespace AttendanceManagementSystem
             //string course = cmb_sub.Text;           
 
         }
+        private List<string> GetRoom()
+        {
+            List<string> room = new List<string>();
+            try
+            {
+                conn.Open();               
+                str = "select distinct ClassRoom from Student";
+                cmd = new SqlCommand(str, conn);
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    room.Add(dr["ClassRoom"].ToString());
+                }
+               
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                cmd.Dispose();
+                conn.Close();
+            }
+            return room;
+        }
 
-       
+        private void link_StuReg_Click(object sender, EventArgs e)
+        {
+            StudentRegistration stdreg = new StudentRegistration();
+            stdreg.ShowDialog();
+           
+        }
     }
 }

@@ -34,7 +34,6 @@
             this.txt_password = new System.Windows.Forms.TextBox();
             this.btn_login = new System.Windows.Forms.Button();
             this.link_reg = new System.Windows.Forms.LinkLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,10 +44,11 @@
             this.link_forgetpassword = new System.Windows.Forms.LinkLabel();
             this.txt_newpassword = new System.Windows.Forms.TextBox();
             this.lbl_confirmpassword = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -60,7 +60,7 @@
             this.label1.Location = new System.Drawing.Point(70, 125);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 17);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 6;
             this.label1.Text = "UserName";
             // 
             // lbl_password
@@ -69,10 +69,10 @@
             this.lbl_password.AutoSize = true;
             this.lbl_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_password.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_password.Location = new System.Drawing.Point(70, 192);
+            this.lbl_password.Location = new System.Drawing.Point(70, 196);
             this.lbl_password.Name = "lbl_password";
             this.lbl_password.Size = new System.Drawing.Size(0, 17);
-            this.lbl_password.TabIndex = 0;
+            this.lbl_password.TabIndex = 7;
             // 
             // txt_username
             // 
@@ -82,18 +82,19 @@
             this.txt_username.Location = new System.Drawing.Point(73, 144);
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(219, 26);
-            this.txt_username.TabIndex = 1;
+            this.txt_username.TabIndex = 0;
             this.txt_username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt_password
             // 
             this.txt_password.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txt_password.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.txt_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_password.Location = new System.Drawing.Point(73, 212);
+            this.txt_password.Location = new System.Drawing.Point(73, 216);
             this.txt_password.Name = "txt_password";
             this.txt_password.Size = new System.Drawing.Size(219, 26);
-            this.txt_password.TabIndex = 2;
+            this.txt_password.TabIndex = 1;
             this.txt_password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_password.UseSystemPasswordChar = true;
             this.txt_password.UseWaitCursor = true;
@@ -125,19 +126,9 @@
             this.link_reg.Text = "Register";
             this.link_reg.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_reg_LinkClicked);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::AttendanceManagementSystem.Properties.Resources.download;
-            this.pictureBox2.Location = new System.Drawing.Point(25, 34);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(170, 138);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.link_login);
             this.panel2.Controls.Add(this.link_reg);
@@ -149,7 +140,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(227)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(200)))));
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -197,7 +188,7 @@
             this.panel3.Controls.Add(this.lbl_confirmpassword);
             this.panel3.Controls.Add(this.btn_login);
             this.panel3.Controls.Add(this.lbl_password);
-            this.panel3.Location = new System.Drawing.Point(532, 49);
+            this.panel3.Location = new System.Drawing.Point(569, 56);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(379, 475);
             this.panel3.TabIndex = 7;
@@ -205,7 +196,7 @@
             // chk_show
             // 
             this.chk_show.AutoSize = true;
-            this.chk_show.Location = new System.Drawing.Point(307, 219);
+            this.chk_show.Location = new System.Drawing.Point(307, 223);
             this.chk_show.Name = "chk_show";
             this.chk_show.Size = new System.Drawing.Size(51, 17);
             this.chk_show.TabIndex = 5;
@@ -248,6 +239,7 @@
             this.txt_newpassword.Name = "txt_newpassword";
             this.txt_newpassword.Size = new System.Drawing.Size(219, 26);
             this.txt_newpassword.TabIndex = 2;
+            this.txt_newpassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_newpassword.UseSystemPasswordChar = true;
             // 
             // lbl_confirmpassword
@@ -259,7 +251,17 @@
             this.lbl_confirmpassword.Location = new System.Drawing.Point(70, 262);
             this.lbl_confirmpassword.Name = "lbl_confirmpassword";
             this.lbl_confirmpassword.Size = new System.Drawing.Size(0, 17);
-            this.lbl_confirmpassword.TabIndex = 0;
+            this.lbl_confirmpassword.TabIndex = 8;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::AttendanceManagementSystem.Properties.Resources.download;
+            this.pictureBox2.Location = new System.Drawing.Point(25, 34);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(170, 138);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
             // 
             // LoginForm
             // 
@@ -276,13 +278,13 @@
             this.Text = "Login";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.LoginForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

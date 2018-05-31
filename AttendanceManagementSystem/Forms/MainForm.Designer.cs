@@ -52,6 +52,7 @@
             this.radio_present = new System.Windows.Forms.RadioButton();
             this.radio_absent = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.link_StuReg = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbl_total = new System.Windows.Forms.Label();
@@ -60,8 +61,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmb_Room = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.link_StuReg = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
@@ -111,7 +113,7 @@
             this.cmb_stulist.AllowDrop = true;
             this.cmb_stulist.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_stulist.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_stulist.Location = new System.Drawing.Point(12, 118);
+            this.cmb_stulist.Location = new System.Drawing.Point(12, 117);
             this.cmb_stulist.Name = "cmb_stulist";
             this.cmb_stulist.Size = new System.Drawing.Size(94, 24);
             this.cmb_stulist.TabIndex = 3;
@@ -120,7 +122,7 @@
             // btn_search
             // 
             this.btn_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_search.Location = new System.Drawing.Point(329, 117);
+            this.btn_search.Location = new System.Drawing.Point(429, 115);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(150, 26);
             this.btn_search.TabIndex = 4;
@@ -231,7 +233,7 @@
             "4BE",
             "5BE",
             "6BE"});
-            this.cmb_sub.Location = new System.Drawing.Point(165, 116);
+            this.cmb_sub.Location = new System.Drawing.Point(267, 116);
             this.cmb_sub.Name = "cmb_sub";
             this.cmb_sub.Size = new System.Drawing.Size(92, 24);
             this.cmb_sub.TabIndex = 6;
@@ -240,7 +242,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(112, 121);
+            this.label8.Location = new System.Drawing.Point(112, 122);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(38, 17);
             this.label8.TabIndex = 7;
@@ -250,7 +252,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(263, 123);
+            this.label9.Location = new System.Drawing.Point(365, 123);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 17);
             this.label9.TabIndex = 7;
@@ -259,7 +261,7 @@
             // btn_attsave
             // 
             this.btn_attsave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_attsave.Location = new System.Drawing.Point(714, 118);
+            this.btn_attsave.Location = new System.Drawing.Point(815, 117);
             this.btn_attsave.Name = "btn_attsave";
             this.btn_attsave.Size = new System.Drawing.Size(100, 24);
             this.btn_attsave.TabIndex = 8;
@@ -271,7 +273,7 @@
             // 
             this.radio_present.AutoSize = true;
             this.radio_present.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radio_present.Location = new System.Drawing.Point(495, 120);
+            this.radio_present.Location = new System.Drawing.Point(599, 118);
             this.radio_present.Name = "radio_present";
             this.radio_present.Size = new System.Drawing.Size(94, 21);
             this.radio_present.TabIndex = 10;
@@ -284,7 +286,7 @@
             // 
             this.radio_absent.AutoSize = true;
             this.radio_absent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radio_absent.Location = new System.Drawing.Point(605, 119);
+            this.radio_absent.Location = new System.Drawing.Point(709, 117);
             this.radio_absent.Name = "radio_absent";
             this.radio_absent.Size = new System.Drawing.Size(89, 21);
             this.radio_absent.TabIndex = 10;
@@ -308,11 +310,24 @@
             this.panel2.TabIndex = 11;
             this.panel2.Visible = false;
             // 
+            // link_StuReg
+            // 
+            this.link_StuReg.AutoSize = true;
+            this.link_StuReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.link_StuReg.LinkColor = System.Drawing.Color.LawnGreen;
+            this.link_StuReg.Location = new System.Drawing.Point(159, 427);
+            this.link_StuReg.Name = "link_StuReg";
+            this.link_StuReg.Size = new System.Drawing.Size(121, 18);
+            this.link_StuReg.TabIndex = 3;
+            this.link_StuReg.TabStop = true;
+            this.link_StuReg.Text = "Add New Student";
+            this.link_StuReg.Click += new System.EventHandler(this.link_StuReg_Click);
+            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.White;
+            this.linkLabel1.LinkColor = System.Drawing.Color.LawnGreen;
             this.linkLabel1.Location = new System.Drawing.Point(190, 401);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(44, 18);
@@ -401,6 +416,33 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Number Of Student Present :";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(206, 123);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 17);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Room";
+            // 
+            // cmb_Room
+            // 
+            this.cmb_Room.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_Room.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Room.FormattingEnabled = true;
+            this.cmb_Room.Items.AddRange(new object[] {
+            "1BE",
+            "2BE",
+            "3BE",
+            "4BE",
+            "5BE",
+            "6BE"});
+            this.cmb_Room.Location = new System.Drawing.Point(153, 116);
+            this.cmb_Room.Name = "cmb_Room";
+            this.cmb_Room.Size = new System.Drawing.Size(47, 24);
+            this.cmb_Room.TabIndex = 6;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -412,19 +454,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // link_StuReg
-            // 
-            this.link_StuReg.AutoSize = true;
-            this.link_StuReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.link_StuReg.LinkColor = System.Drawing.Color.White;
-            this.link_StuReg.Location = new System.Drawing.Point(159, 427);
-            this.link_StuReg.Name = "link_StuReg";
-            this.link_StuReg.Size = new System.Drawing.Size(121, 18);
-            this.link_StuReg.TabIndex = 3;
-            this.link_StuReg.TabStop = true;
-            this.link_StuReg.Text = "Add New Student";
-            this.link_StuReg.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -434,8 +463,10 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.radio_absent);
             this.Controls.Add(this.radio_present);
+            this.Controls.Add(this.cmb_Room);
             this.Controls.Add(this.cmb_sub);
             this.Controls.Add(this.btn_attsave);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dataGridView1);
@@ -494,5 +525,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn classRoomDataGridViewTextBoxColumn;
         private System.Windows.Forms.LinkLabel link_StuReg;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cmb_Room;
     }
 }
