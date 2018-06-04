@@ -16,6 +16,8 @@ namespace AttendanceManagementSystem
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["StudentDB"].ConnectionString);
         SqlCommand cmd1;
+        SqlDataReader dr;
+        string str;
     
         public RegisterForm()
         {
@@ -26,6 +28,8 @@ namespace AttendanceManagementSystem
         {
             txt_regpassword.UseSystemPasswordChar = true;
             txt_conpass.UseSystemPasswordChar = true;
+
+          
         }
 
         private void btn_register(object sender, EventArgs e)

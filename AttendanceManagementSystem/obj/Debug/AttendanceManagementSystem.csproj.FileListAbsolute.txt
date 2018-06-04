@@ -142,3 +142,4 @@ D:\All WorkSpace\StudentAttendanceManagementSystem\AttendanceManagementSystem\ob
 D:\All WorkSpace\StudentAttendanceManagementSystem\AttendanceManagementSystem\obj\Debug\AttendanceManagementSystem.exe
 D:\All WorkSpace\StudentAttendanceManagementSystem\AttendanceManagementSystem\obj\Debug\AttendanceManagementSystem.pdb
 D:\All WorkSpace\StudentAttendanceManagementSystem\AttendanceManagementSystem\obj\Debug\AttendanceManagementSystem.csprojResolveAssemblyReference.cache
+D:\All WorkSpace\StudentAttendanceManagementSystem\AttendanceManagementSystem\obj\Debug\AttendanceManagementSystem.CustomDialogBox.OKDialog.resources

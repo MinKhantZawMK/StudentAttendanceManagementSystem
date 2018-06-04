@@ -37,6 +37,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.link_login = new System.Windows.Forms.LinkLabel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.chk_show = new System.Windows.Forms.CheckBox();
@@ -44,11 +45,10 @@
             this.link_forgetpassword = new System.Windows.Forms.LinkLabel();
             this.txt_newpassword = new System.Windows.Forms.TextBox();
             this.lbl_confirmpassword = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -159,6 +159,16 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Technological\r\n    University\r\n    (Kyaukse)\r\n";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::AttendanceManagementSystem.Properties.Resources.download;
+            this.pictureBox2.Location = new System.Drawing.Point(25, 34);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(170, 138);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            // 
             // link_login
             // 
             this.link_login.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -253,16 +263,6 @@
             this.lbl_confirmpassword.Size = new System.Drawing.Size(0, 17);
             this.lbl_confirmpassword.TabIndex = 8;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::AttendanceManagementSystem.Properties.Resources.download;
-            this.pictureBox2.Location = new System.Drawing.Point(25, 34);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(170, 138);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -275,16 +275,15 @@
             this.MaximizeBox = false;
             this.Name = "LoginForm";
             this.ShowIcon = false;
-            this.Text = "Login";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

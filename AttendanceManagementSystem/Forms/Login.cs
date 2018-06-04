@@ -146,8 +146,11 @@ namespace AttendanceManagementSystem
         }
         private void link_reg_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ForgotPassView();
-            clear();
+            //ForgotPassView();
+            //clear();
+            RegisterForm regform = new RegisterForm();
+            regform.ShowDialog();
+
 
         }
 

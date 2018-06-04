@@ -55,7 +55,7 @@
             this.btn_exit.ForeColor = System.Drawing.Color.White;
             this.btn_exit.Location = new System.Drawing.Point(684, 3);
             this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(27, 26);
+            this.btn_exit.Size = new System.Drawing.Size(27, 25);
             this.btn_exit.TabIndex = 2;
             this.btn_exit.Text = "X";
             this.btn_exit.UseVisualStyleBackColor = false;
@@ -231,16 +231,16 @@
             this.panel1.Controls.Add(this.txt_name);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(27, 28);
+            this.panel1.Location = new System.Drawing.Point(35, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(651, 356);
+            this.panel1.Size = new System.Drawing.Size(643, 356);
             this.panel1.TabIndex = 15;
             // 
             // StudentRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(713, 410);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
